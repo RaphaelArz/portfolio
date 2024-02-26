@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #078571;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .projet {
+            margin-bottom: 30px;
+        }
+
+        .projet h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .projet p {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            text-align: center;
+        }
+
+        .image-lightbox {
+            margin-top: 20px;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .fermer {
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Journal de Vente</h1>
+</header>
+<main>
+    <section class="projet">
+        <h2 id="nomProjet">Journal de Vente</h2>
+        <p>
+            Le comptable de l'entreprise devait chaque mois réaliser un fichier Excel contenant les informations des factures. Il devait récupérer les factures du logiciel dédié aux factures, les formaliser sur un fichier Excel avec les numéros de client, le compte des ventes, la TVA, etc. Ce travail lui prenait beaucoup de temps car il y avait plusieurs centaines de factures par mois. Pour résoudre ce problème, j'ai mis en place un extracteur qui récupérait directement les informations nécessaires depuis le logiciel de facturation avec sa base de données et qui renvoyait le tout sous la forme demandée dans un fichier Excel. Le choix de la date des factures à prendre en compte se faisait via une interface graphique.
+        </p>
+        <p>
+            Pour garantir la précision des données extraites, j'ai mis en place un système dynamique de gestion des comptes clients. Comme les comptes clients pouvaient être amenés à changer ou de nouveaux pouvaient apparaître, j'ai développé un fichier texte contenant le nom du client, le taux de TVA applicable et la mention "à ajouter". Ce fichier texte est automatiquement mis à jour et créé si le client n'existait pas auparavant. Avant de lancer l'extraction des données, le comptable doit simplement s'assurer que tous les noms de clients sont correctement reliés à leur compte dans ce fichier texte. Ainsi, le processus d'extraction des informations des factures est toujours aligné avec les dernières informations disponibles concernant les clients de l'entreprise.
+        </p>
+
+        <h2>Objectifs :</h2>
+        <ul>
+            <li>Simplifier et accélérer le processus de récupération des données des factures.</li>
+            <li>Réduire le temps consacré à la création manuelle des fichiers Excel.</li>
+            <li>Automatiser la collecte des informations depuis le logiciel de facturation.</li>
+            <li>Améliorer la précision et la fiabilité des données extraites.</li>
+        </ul>
+        <h2>Fonctionnalités Clés :</h2>
+        <ul>
+            <li>Extraction Automatique : L'outil extrait automatiquement les données des factures depuis le logiciel de facturation, en tenant compte des critères sélectionnés.</li>
+            <li>Interface Conviviale : Une interface graphique intuitive permet de choisir les paramètres de recherche et de personnaliser les données extraites.</li>
+            <li>Génération de Rapports : Le logiciel génère des rapports détaillés sous forme de fichiers Excel, prêts à être utilisés par le comptable.</li>
+            <li>Mise à Jour Automatique : Les données sont extraites en temps réel, assurant ainsi la disponibilité des informations les plus récentes.</li>
+        </ul>
+        <br>
+        <h1>Images : </h1>
+        <div class="images">
+            <img src="image/jdv1.png" alt="Image 1" onclick="ouvrirLightbox('image/jdv1.png')">
+            <img src="image/jdv2.png" alt="Image 2" onclick="ouvrirLightbox('image/jdv2.png')">
+            <img src="image/jdv3.png" alt="Image 3" onclick="ouvrirLightbox('image/jdv3.png')">
+            <img src="image/jdv4.png" alt="Image 4" onclick="ouvrirLightbox('image/jdv4.png')">
+            <img src="image/jdv6.png" alt="Image 4" onclick="ouvrirLightbox('image/jdv6.png')">
+            <img src="image/jdv5.png" alt="Image 5" onclick="ouvrirLightbox('image/jdv5.png')">
+            <!-- Ajoutez d'autres images ici -->
+        </div>
+    </section>
+</main>
+<div id="lightbox" class="lightbox" onclick="fermerLightbox()">
+    <span class="fermer" onclick="fermerLightbox()">&times;</span>
+    <img src="" id="imageLightbox" class="image-lightbox">
+</div>
+<script>
+    function ouvrirLightbox(src) {
+        document.getElementById('imageLightbox').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function fermerLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+</body>
+</html>

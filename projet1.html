@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #078571;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .projet {
+            margin-bottom: 30px;
+        }
+
+        .projet h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .projet p {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            text-align: center;
+        }
+
+        .image-lightbox {
+            margin-top: 20px;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .fermer {
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Projet annuaire</h1>
+</header>
+<main>
+    <section class="projet">
+        <h2 id="nomProjet">Projet annuaire</h2>
+        <p>
+            Lors de mon dernier jour de stage, j'ai pu constater que les employés devaient effectuer des recherches complexes dans le logiciel de paie pour trouver les informations relatives à un ouvrier. Cette procédure, qui prenait beaucoup de temps, nécessitait souvent de lancer plusieurs requêtes successives pour obtenir les résultats désirés. Afin de simplifier ce processus et d'optimiser la productivité de l'équipe, j'ai décidé de concevoir un logiciel dédié qui permettrait aux utilisateurs de rechercher directement un ouvrier en fonction de plusieurs critères tels que l'adresse e-mail, le numéro de téléphone, le nom ou le service auquel il est affilié.
+        </p>
+        <h2>Fonctionnalités Clés :</h2>
+        <ul>
+            <li>Recherche Polyvalente : Le logiciel permettra aux utilisateurs de rechercher un ouvrier en utilisant différents critères, offrant ainsi une flexibilité et une rapidité d'accès aux informations nécessaires.</li>
+            <li>Interface Conviviale : L'interface utilisateur sera conçue de manière intuitive, facilitant la saisie des critères de recherche et l'affichage des résultats de manière claire et ordonnée.</li>
+            <li>Intégration Transparente : Le logiciel sera intégré au système existant de l'entreprise, garantissant une transition en douceur et une adoption rapide par les utilisateurs.</li>
+            <li>Gestion des Permissions : Une fonctionnalité de gestion des permissions sera mise en place pour contrôler l'accès aux données sensibles et garantir la confidentialité des informations.</li>
+        </ul>
+        <h2>Objectifs :</h2>
+        <ul>
+            <li>Simplifier et accélérer le processus de recherche d'informations sur les ouvriers.</li>
+            <li>Réduire le temps consacré à la navigation dans le logiciel de paie.</li>
+            <li>Améliorer l'efficacité opérationnelle de l'équipe en fournissant un outil convivial et performant.</li>
+        </ul>
+        <br>
+        <h1>Images : </h1>
+        <div class="images">
+            <img src="image/ANNUAIRE.png" alt="Image 1" onclick="ouvrirLightbox('image/ANNUAIRE.png')">
+            <!-- Ajoutez d'autres images ici -->
+        </div>
+    </section>
+</main>
+<div id="lightbox" class="lightbox" onclick="fermerLightbox()">
+    <span class="fermer" onclick="fermerLightbox()">&times;</span>
+    <img src="" id="imageLightbox" class="image-lightbox">
+</div>
+<script>
+    function ouvrirLightbox(src) {
+        document.getElementById('imageLightbox').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function fermerLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+</body>
+</html>
