@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #078571;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .projet {
+            margin-bottom: 30px;
+        }
+
+        .projet h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .projet p {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            text-align: center;
+        }
+
+        .image-lightbox {
+            margin-top: 20px;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .fermer {
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Projet Mailer</h1>
+</header>
+<main>
+    <section class="projet">
+        <h2 id="nomProjet">Projet Mailer</h2>
+        <p>
+            Pour répondre aux besoins de suivi des commandes de matériel effectuées par les ouvriers sur le store de l'entreprise, j'ai mis en place un système automatisé d'envoi d'e-mails. Chaque semaine et chaque mois, les ouvriers reçoivent un e-mail récapitulatif leur indiquant le nombre de commandes passées, ainsi que le montant total des achats réalisés. De plus, le chef de service reçoit un e-mail contenant les détails de chaque ouvrier de son service, comprenant les mêmes informations. Enfin, le responsable général reçoit un e-mail fournissant le total des commandes passées, ainsi que le détail de toutes les commandes par service.
+        </p>
+        <h2>Fonctionnalités Clés :</h2>
+        <ul>
+            <li>Système de Mailer Automatique : Envoi d'e-mails hebdomadaires et mensuels aux ouvriers et aux chefs de service pour leur fournir des informations sur les commandes passées.</li>
+            <li>Récapitulatif des Commandes : Les e-mails contiennent le nombre de commandes, ainsi que le montant total des achats effectués.</li>
+            <li>Hiérarchie d'Information : Les chefs de service reçoivent des e-mails détaillés sur les ouvriers de leur service, tandis que le responsable général reçoit un résumé global.</li>
+        </ul>
+        <h2>Objectifs :</h2>
+        <ul>
+            <li>Optimiser le suivi des commandes de matériel réalisées par les ouvriers.</li>
+            <li>Faciliter l'accès aux informations sur les commandes et les dépenses pour chaque service.</li>
+            <li>Améliorer la transparence et l'efficacité de la gestion des achats au sein de l'entreprise.</li>
+        </ul>
+        <br>
+        <h1>Images : </h1>
+        <div class="images">
+            <img src="image/ms1.png" alt="Image ms1" onclick="ouvrirLightbox('image/ms1.png')">
+            <img src="image/ms2.png" alt="Image ms2" onclick="ouvrirLightbox('image/ms2.png')">
+            <img src="image/ms3.png" alt="Image ms3" onclick="ouvrirLightbox('image/ms3.png')">
+            <img src="image/ms4.png" alt="Image ms4" onclick="ouvrirLightbox('image/ms4.png')">
+            <img src="image/ms5.png" alt="Image ms5" onclick="ouvrirLightbox('image/ms5.png')">
+            <img src="image/mm1.png" alt="Image mm1" onclick="ouvrirLightbox('image/mm1.png')">
+            <img src="image/mm2.png" alt="Image mm2" onclick="ouvrirLightbox('image/mm2.png')">
+            <img src="image/mm3.png" alt="Image mm3" onclick="ouvrirLightbox('image/mm3.png')">
+        </div>
+    </section>
+</main>
+<div id="lightbox" class="lightbox" onclick="fermerLightbox()">
+    <span class="fermer" onclick="fermerLightbox()">&times;</span>
+    <img src="" id="imageLightbox" class="image-lightbox">
+</div>
+<script>
+    function ouvrirLightbox(src) {
+        document.getElementById('imageLightbox').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function fermerLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+</body>
+</html>
