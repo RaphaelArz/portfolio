@@ -98,38 +98,36 @@
 </head>
 <body>
 <header>
-    <h1>Projet Mailer</h1>
+    <h1>Projet Reporting</h1>
 </header>
 <main>
     <section class="projet">
-        <h2 id="nomProjet">Projet Mailer</h2>
+        <h2 id="nomProjet">Projet Reporting</h2>
         <p>
-            Pour répondre aux besoins de suivi des commandes de matériel effectuées par les ouvriers sur le store de l'entreprise, j'ai mis en place un système automatisé d'envoi d'e-mails. Chaque semaine et chaque mois, les ouvriers reçoivent un e-mail récapitulatif leur indiquant le nombre de commandes passées, ainsi que le montant total des achats réalisés. De plus, le chef de service reçoit un e-mail contenant les détails de chaque ouvrier de son service, comprenant les mêmes informations. Enfin, le responsable général reçoit un e-mail fournissant le total des commandes passées, ainsi que le détail de toutes les commandes par service.
+            À la demande du patron de l'entreprise, j'ai réalisé ce projet pour automatiser le processus mensuel de création d'un fichier Excel. Auparavant, le patron devait remplir manuellement un fichier Excel avec les données sur les achats, les ventes réalisées sur le mois, ainsi que les coûts de revient par service et sous-service, en extrayant ces informations des différents logiciels de l'entreprise, notamment EBP et le store mis en place par l'entreprise. J'ai conçu un programme avec une interface permettant au patron de sélectionner la période pour le reporting. En un clic sur le bouton, un fichier Excel est généré avec plusieurs feuilles, chacune dédiée à un service et à ses sous-services, ainsi qu'une feuille principale contenant les totaux de chaque service et de l'entreprise. De plus, j'ai mis en place des liens entre les feuilles pour que toute modification dans un sous-service mette automatiquement à jour les totaux sur la feuille principale.
         </p>
         <h2>Fonctionnalités Clés :</h2>
         <ul>
-            <li>Système de Mailer Automatique : Envoi d'e-mails hebdomadaires et mensuels aux ouvriers et aux chefs de service pour leur fournir des informations sur les commandes passées.</li>
-            <li>Récapitulatif des Commandes : Les e-mails contiennent le nombre de commandes, ainsi que le montant total des achats effectués.</li>
-            <li>Hiérarchie d'Information : Les chefs de service reçoivent des e-mails détaillés sur les ouvriers de leur service, tandis que le responsable général reçoit un résumé global.</li>
+            <li>Interface conviviale permettant de choisir la période pour le reporting.</li>
+            <li>Génération automatique d'un fichier Excel avec plusieurs feuilles détaillant les achats, les ventes et les coûts de revient par service et sous-service.</li>
+            <li>Mise à jour automatique des totaux sur la feuille principale en cas de modification dans un sous-service.</li>
         </ul>
         <h2>Objectifs :</h2>
         <ul>
-            <li>Optimiser le suivi des commandes de matériel réalisées par les ouvriers.</li>
-            <li>Faciliter l'accès aux informations sur les commandes et les dépenses pour chaque service.</li>
-            <li>Améliorer la transparence et l'efficacité de la gestion des achats au sein de l'entreprise.</li>
+            <li>Automatiser le processus de création du rapport mensuel pour gagner du temps et réduire les erreurs humaines.</li>
+            <li>Faciliter l'accès aux données sur les achats, les ventes et les coûts de revient pour une meilleure prise de décision.</li>
+            <li>Améliorer l'efficacité de la gestion des finances et des opérations au sein de l'entreprise.</li>
         </ul>
         <br>
         <h1>Images : </h1>
         <div class="images">
-            <img src="image/ms1.png" alt="Image ms1" onclick="ouvrirLightbox('image/ms1.png')">
-            <img src="image/ms2.png" alt="Image ms2" onclick="ouvrirLightbox('image/ms2.png')">
-            <img src="image/ms3.png" alt="Image ms3" onclick="ouvrirLightbox('image/ms3.png')">
-            <img src="image/ms4.png" alt="Image ms4" onclick="ouvrirLightbox('image/ms4.png')">
-            <img src="image/ms5.png" alt="Image ms5" onclick="ouvrirLightbox('image/ms5.png')">
-            <img src="image/mm1.png" alt="Image mm1" onclick="ouvrirLightbox('image/mm1.png')">
-            <img src="image/mm2.png" alt="Image mm2" onclick="ouvrirLightbox('image/mm2.png')">
-            <img src="image/mm3.png" alt="Image mm3" onclick="ouvrirLightbox('image/mm3.png')">
-            <!-- Ajoutez d'autres images ici -->
+            <img src="image/r1.png" alt="Image r1" onclick="ouvrirLightbox('image/r1.png')">
+            <img src="image/r2.png" alt="Image r2" onclick="ouvrirLightbox('image/r2.png')">
+            <img src="image/r3.png" alt="Image r3" onclick="ouvrirLightbox('image/r3.png')">
+            <img src="image/r4.png" alt="Image r4" onclick="ouvrirLightbox('image/r4.png')">
+            <img src="image/r5.png" alt="Image r5" onclick="ouvrirLightbox('image/r5.png')">
+            <img src="image/r6.png" alt="Image r6" onclick="ouvrirLightbox('image/r6.png')">
+            <img src="image/r7.png" alt="Image r7" onclick="ouvrirLightbox('image/r7.png')">
         </div>
     </section>
 </main>
@@ -141,38 +139,33 @@
     <span class="navigation navigation-right" onclick="nextImage(event)">&#10095;</span>
 </div>
 <script>
+    var images = [
+        "image/r1.png",
+        "image/r2.png",
+        "image/r3.png",
+        "image/r4.png",
+        "image/r5.png",
+        "image/r6.png",
+        "image/r7.png"
+    ];
+    var currentImageIndex = 0;
+
     function ouvrirLightbox(src) {
         document.getElementById('imageLightbox').src = src;
         document.getElementById('lightbox').style.display = 'block';
+        currentImageIndex = images.indexOf(src);
     }
 
     function fermerLightbox() {
         document.getElementById('lightbox').style.display = 'none';
     }
 
-    // Liste des images
-    var images = [
-        "image/ms1.png",
-        "image/ms2.png",
-        "image/ms3.png",
-        "image/ms4.png",
-        "image/ms5.png",
-        "image/mm1.png",
-        "image/mm2.png",
-        "image/mm3.png"
-    ];
-
-    // Index de l'image en cours
-    var currentImageIndex = 0;
-
-    // Fonction pour afficher l'image précédente
     function prevImage(event) {
         event.stopPropagation(); // Empêche la fermeture de la lightbox
         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
         document.getElementById('imageLightbox').src = images[currentImageIndex];
     }
 
-    // Fonction pour afficher l'image suivante
     function nextImage(event) {
         event.stopPropagation(); // Empêche la fermeture de la lightbox
         currentImageIndex = (currentImageIndex + 1) % images.length;

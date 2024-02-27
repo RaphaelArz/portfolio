@@ -75,6 +75,25 @@
             right: 20px;
             cursor: pointer;
         }
+
+        /* Styles pour les boutons de navigation */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10000; /* Assure que les boutons restent au-dessus de la lumière */
+        }
+
+        .navigation-left {
+            left: 10px;
+        }
+
+        .navigation-right {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -109,6 +128,9 @@
 <div id="lightbox" class="lightbox" onclick="fermerLightbox()">
     <span class="fermer" onclick="fermerLightbox()">&times;</span>
     <img src="" id="imageLightbox" class="image-lightbox">
+    <!-- Boutons de navigation -->
+    <div class="navigation navigation-left" onclick="prevImage(event)">&#10094;</div>
+    <div class="navigation navigation-right" onclick="nextImage(event)">&#10095;</div>
 </div>
 <script>
     function ouvrirLightbox(src) {
@@ -118,6 +140,30 @@
 
     function fermerLightbox() {
         document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+<script>
+    // Liste des images
+    var images = [
+        "image/ANNUAIRE.png",
+        /* Ajoutez d'autres images ici */
+    ];
+
+    // Index de l'image en cours
+    var currentImageIndex = 0;
+
+    // Fonction pour afficher l'image précédente
+    function prevImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+
+    // Fonction pour afficher l'image suivante
+    function nextImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
     }
 </script>
 </body>

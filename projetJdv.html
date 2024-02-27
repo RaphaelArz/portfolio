@@ -75,6 +75,25 @@
             right: 20px;
             cursor: pointer;
         }
+
+        /* Styles pour les boutons de navigation */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10000; /* Assure que les boutons restent au-dessus de la lumière */
+        }
+
+        .navigation-left {
+            left: 10px;
+        }
+
+        .navigation-right {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -85,10 +104,10 @@
     <section class="projet">
         <h2 id="nomProjet">Journal de Vente</h2>
         <p>
-            Le comptable de l'entreprise devait chaque mois réaliser un fichier Excel contenant les informations des factures. Il devait récupérer les factures du logiciel dédié aux factures, les formaliser sur un fichier Excel avec les numéros de client, le compte des ventes, la TVA, etc. Ce travail lui prenait beaucoup de temps car il y avait plusieurs centaines de factures par mois. Pour résoudre ce problème, j'ai mis en place un extracteur qui récupére directement les informations nécessaires depuis le logiciel de facturation avec sa base de données et qui renvoie le tout sous la forme demandée dans un fichier Excel. Le choix de la date des factures à prendre en compte se faisait via une interface graphique.
+            Le comptable de l'entreprise devait chaque mois réaliser un fichier Excel contenant les informations des factures. Il devait récupérer les factures du logiciel dédié aux factures, les formaliser sur un fichier Excel avec les numéros de client, le compte des ventes, la TVA, etc. Ce travail lui prenait beaucoup de temps car il y avait plusieurs centaines de factures par mois. Pour résoudre ce problème, j'ai mis en place un extracteur qui récupère directement les informations nécessaires depuis le logiciel de facturation avec sa base de données et qui renvoie le tout sous la forme demandée dans un fichier Excel. Le choix de la date des factures à prendre en compte se faisait via une interface graphique.
         </p>
         <p>
-            Pour garantir la précision des données extraites, j'ai mis en place un système dynamique de gestion des comptes clients. Comme les comptes clients pouvaient être amenés à changer ou de nouveaux pouvaient apparaître, j'ai développé un fichier texte contenant le nom du client, le taux de TVA applicable et la mention "à completer". Ce fichier texte est automatiquement mis à jour et créé si le client n'existait pas auparavant. Avant de lancer l'extraction des données, le comptable doit simplement s'assurer que tous les noms de clients sont correctement reliés à leur compte dans ce fichier texte. Ainsi, le processus d'extraction des informations des factures est toujours aligné avec les dernières informations disponibles concernant les clients de l'entreprise.
+            Pour garantir la précision des données extraites, j'ai mis en place un système dynamique de gestion des comptes clients. Comme les comptes clients pouvaient être amenés à changer ou de nouveaux pouvaient apparaître, j'ai développé un fichier texte contenant le nom du client, le taux de TVA applicable et la mention "à compléter". Ce fichier texte est automatiquement mis à jour et créé si le client n'existait pas auparavant. Avant de lancer l'extraction des données, le comptable doit simplement s'assurer que tous les noms de clients sont correctement reliés à leur compte dans ce fichier texte. Ainsi, le processus d'extraction des informations des factures est toujours aligné avec les dernières informations disponibles concernant les clients de l'entreprise.
         </p>
 
         <h2>Objectifs :</h2>
@@ -121,6 +140,9 @@
 <div id="lightbox" class="lightbox" onclick="fermerLightbox()">
     <span class="fermer" onclick="fermerLightbox()">&times;</span>
     <img src="" id="imageLightbox" class="image-lightbox">
+    <!-- Boutons de navigation -->
+    <span class="navigation navigation-left" onclick="prevImage(event)">&#10094;</span>
+    <span class="navigation navigation-right" onclick="nextImage(event)">&#10095;</span>
 </div>
 <script>
     function ouvrirLightbox(src) {
@@ -130,6 +152,33 @@
 
     function fermerLightbox() {
         document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // Liste des images
+    var images = [
+        "image/jdv1.png",
+        "image/jdv2.png",
+        "image/jdv3.png",
+        "image/jdv4.png",
+        "image/jdv6.png",
+        "image/jdv5.png"
+    ];
+
+    // Index de l'image en cours
+    var currentImageIndex = 0;
+
+    // Fonction pour afficher l'image précédente
+    function prevImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+
+    // Fonction pour afficher l'image suivante
+    function nextImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
     }
 </script>
 </body>
