@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #078571;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .projet {
+            margin-bottom: 30px;
+        }
+
+        .projet h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .projet p {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            text-align: center;
+        }
+
+        .image-lightbox {
+            margin-top: 20px;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .fermer {
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        /* Styles pour les boutons de navigation */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10000; /* Assure que les boutons restent au-dessus de la lumière */
+        }
+
+        .navigation-left {
+            left: 10px;
+        }
+
+        .navigation-right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Projet Envoie de PDF</h1>
+</header>
+<main>
+    <section class="projet">
+        <h2 id="nomProjet">Projet Envoie de PDF</h2>
+        <p>
+            Les coordinatrices en charge de la planification des interventions devaient fournir les bons de commande au personnel effectuant les interventions. Ces bons étaient stockés en format PDF sur un logiciel distinct de celui de planification, ainsi que sur un serveur interne de l'entreprise. Pour accéder à chaque PDF, il était nécessaire de rechercher dans le logiciel de facturation l'intervention correspondante, où le chemin vers le PDF était indiqué dans les notes. Pour simplifier ce processus fastidieux, j'ai développé une solution automatisée en utilisant un web service intégré au logiciel de planification des interventions. Un code est exécuté toutes les 2 minutes sur un serveur dédié, récupérant les emplacements des PDF depuis le logiciel de facturation pour les interventions concernées. Ces PDF sont ensuite transférés automatiquement sur les bons de commande associés dans le logiciel de planification des interventions. Cela permet d'économiser aux coordinatrices le temps nécessaire pour rechercher et importer manuellement chaque PDF, étant donné le volume important d'interventions quotidiennes.
+        </p>
+
+        <h2>Objectifs :</h2>
+        <ul>
+            <li>Automatiser le processus de récupération et d'envoi des bons de commande en PDF.</li>
+            <li>Éliminer la nécessité pour les coordinatrices de rechercher manuellement chaque PDF.</li>
+            <li>Accélérer le traitement des interventions en fournissant rapidement les informations nécessaires au personnel.</li>
+            <li>Optimiser l'efficacité opérationnelle en réduisant les tâches administratives répétitives.</li>
+        </ul>
+
+        <h2>Fonctionnalités Clés :</h2>
+        <ul>
+            <li>Automatisation du Processus : Un code automatisé récupère régulièrement les emplacements des PDF depuis le logiciel de facturation et les transfère aux bons de commande dans le logiciel de planification des interventions.</li>
+            <li>Intégration Transparente : L'automatisation s'intègre de manière transparente aux systèmes existants, minimisant les interruptions et les ajustements nécessaires.</li>
+            <li>Gain de Temps : Les coordinatrices sont libérées de la tâche fastidieuse de recherche et d'importation manuelle des PDF, leur permettant de se concentrer sur des activités à plus haute valeur ajoutée.</li>
+            <li>Fiabilité Accrue : Le processus automatisé réduit les risques d'erreurs humaines et garantit la disponibilité rapide des documents nécessaires aux interventions.</li>
+        </ul>
+
+        <h1>Images : </h1>
+        <div class="images">
+            <img src="image/jdv1.png" alt="Image 1" onclick="ouvrirLightbox('image/jdv1.png')">
+            <img src="image/jdv2.png" alt="Image 2" onclick="ouvrirLightbox('image/jdv2.png')">
+            <img src="image/jdv3.png" alt="Image 3" onclick="ouvrirLightbox('image/jdv3.png')">
+            <img src="image/jdv4.png" alt="Image 4" onclick="ouvrirLightbox('image/jdv4.png')">
+            <img src="image/jdv6.png" alt="Image 4" onclick="ouvrirLightbox('image/jdv6.png')">
+            <img src="image/jdv5.png" alt="Image 5" onclick="ouvrirLightbox('image/jdv5.png')">
+            <!-- Ajoutez d'autres images ici -->
+        </div>
+    </section>
+</main>
+<div id="lightbox" class="lightbox" onclick="fermerLightbox()">
+    <span class="fermer" onclick="fermerLightbox()">&times;</span>
+    <img src="" id="imageLightbox" class="image-lightbox">
+    <!-- Boutons de navigation -->
+    <span class="navigation navigation-left" onclick="prevImage(event)">&#10094;</span>
+    <span class="navigation navigation-right" onclick="nextImage(event)">&#10095;</span>
+</div>
+<script>
+    function ouvrirLightbox(src) {
+        document.getElementById('imageLightbox').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function fermerLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // Liste des images
+    var images = [
+        "image/jdv1.png",
+        "image/jdv2.png",
+        "image/jdv3.png",
+        "image/jdv4.png",
+        "image/jdv6.png",
+        "image/jdv5.png"
+    ];
+
+    // Index de l'image en cours
+    var currentImageIndex = 0;
+
+    // Fonction pour afficher l'image précédente
+    function prevImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+
+    // Fonction pour afficher l'image suivante
+    function nextImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+</script>
+</body>
+</html>
