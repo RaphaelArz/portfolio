@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #83bde5;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .projet {
+            margin-bottom: 30px;
+        }
+
+        .projet h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .projet p {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            text-align: center;
+        }
+
+        .image-lightbox {
+            margin-top: 20px;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .fermer {
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        /* Styles pour les boutons de navigation */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10000; /* Assure que les boutons restent au-dessus de la lumière */
+        }
+
+        .navigation-left {
+            left: 10px;
+        }
+
+        .navigation-right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>PROJET Service Finder</h1>
+</header>
+<main>
+    <section class="projet">
+        <h2 id="nomProjet">PROJET Service Finder</h2>
+        <p>
+            Chaque mois, le comptable devait extraire du logiciel de paie un fichier Excel avec les informations sur les salariés et leur paie. Cependant, il avait besoin des services et des postes qui n'étaient pas renseignés dans le logiciel de paie. Pour résoudre ce problème, j'ai mis en place un petit programme qui permet de compléter ces informations en quelques clics seulement, sans avoir à effectuer de recherches manuelles comme il devait le faire auparavant.
+        </p>
+        <h2>Objectifs :</h2>
+        <ul>
+            <li>Simplifier et accélérer le processus d'extraction des informations sur les salariés.</li>
+            <li>Automatiser la complétion des services et des postes non renseignés dans le logiciel de paie.</li>
+            <li>Améliorer l'efficacité du comptable en réduisant le temps passé sur des tâches manuelles.</li>
+        </ul>
+        <h2>Fonctionnalités Clés :</h2>
+        <ul>
+            <li>Extraction Automatique : Le programme extrait automatiquement les informations sur les salariés depuis le logiciel de paie, en incluant les services et les postes manquants.</li>
+            <li>Interface Conviviale : Une interface utilisateur intuitive permet de compléter les informations manquantes en quelques clics seulement.</li>
+            <li>Gain de Temps : Réduit significativement le temps passé par le comptable à effectuer des recherches manuelles et à saisir des données.</li>
+        </ul>
+        <br>
+        <h1>Images : </h1>
+        <div class="images">
+            <img src="image/SF1.png" alt="Image 1" onclick="ouvrirLightbox('image/SF1.png')">
+            <img src="image/SF2.png" alt="Image 2" onclick="ouvrirLightbox('image/SF2.png')">
+            <img src="image/SF3.png" alt="Image 3" onclick="ouvrirLightbox('image/SF3.png')">
+            <img src="image/SF4.png" alt="Image 4" onclick="ouvrirLightbox('image/SF4.png')">
+        </div>
+    </section>
+</main>
+<div id="lightbox" class="lightbox" onclick="fermerLightbox()">
+    <span class="fermer" onclick="fermerLightbox()">&times;</span>
+    <img src="" id="imageLightbox" class="image-lightbox">
+    <!-- Boutons de navigation -->
+    <span class="navigation navigation-left" onclick="prevImage(event)">&#10094;</span>
+    <span class="navigation navigation-right" onclick="nextImage(event)">&#10095;</span>
+</div>
+<script>
+    function ouvrirLightbox(src) {
+        document.getElementById('imageLightbox').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function fermerLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // Liste des images
+    var images = [
+        "image/SF1.png",
+        "image/SF2.png",
+        "image/SF3.png",
+        "image/SF4.png"
+    ];
+
+    // Index de l'image en cours
+    var currentImageIndex = 0;
+
+    // Fonction pour afficher l'image précédente
+    function prevImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+
+    // Fonction pour afficher l'image suivante
+    function nextImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+</script>
+</body>
+</html>

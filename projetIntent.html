@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f2eaf5;
+            color: #04bddd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .projet {
+            margin-bottom: 30px;
+        }
+
+        .projet h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .projet p {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+            text-align: center;
+        }
+
+        .image-lightbox {
+            margin-top: 20px;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .fermer {
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        /* Styles pour les boutons de navigation */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10000; /* Assure que les boutons restent au-dessus de la lumière */
+        }
+
+        .navigation-left {
+            left: 10px;
+        }
+
+        .navigation-right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>PROJET INTENT</h1>
+</header>
+<main>
+    <section class="projet">
+        <h2 id="nomProjet">PROJET INTENT</h2>
+        <p>
+            Une entreprise cliente de l'entreprise souhaitait que les détails des interventions qui les concernent soient mis à jour dans le site Intent. Cela signifiait que les personnes chargées de mettre à jour le logiciel de planification de l'entreprise devaient également le faire pour les mêmes interventions mais dans le site Intent. J'ai donc, à l'aide du web service du logiciel d'intervention et de celui de Intent, automatisé ce processus pour créer et mettre à jour automatiquement les interventions concernées sur Intent.
+        </p>
+        <h2>Objectifs :</h2>
+        <ul>
+            <li>Automatiser la mise à jour des détails des interventions dans le site Intent.</li>
+            <li>Éliminer la redondance de saisie des informations entre le logiciel de planification de l'entreprise et le site Intent.</li>
+            <li>Améliorer l'efficacité en évitant les tâches manuelles répétitives.</li>
+        </ul>
+        <h2>Fonctionnalités Clés :</h2>
+        <ul>
+            <li>Intégration Web Service : Utilisation des web services du logiciel d'intervention et de celui de Intent pour automatiser le processus de mise à jour.</li>
+            <li>Synchronisation Automatique : Création et mise à jour automatique des interventions sur le site Intent dès qu'elles sont modifiées dans le logiciel de planification.</li>
+            <li>Optimisation du Workflow : Réduction du temps et des efforts nécessaires pour maintenir les informations à jour sur les deux plateformes.</li>
+        </ul>
+        <br>
+        <h1>Images : </h1>
+        <div class="images">
+            <img src="image/INTENT1.png" alt="Image 1" onclick="ouvrirLightbox('image/INTENT1.png')">
+            <img src="image/INTENT2.png" alt="Image 2" onclick="ouvrirLightbox('image/INTENT2.png')">
+            <img src="image/INTENT3.png" alt="Image 3" onclick="ouvrirLightbox('image/INTENT3.png')">
+        </div>
+    </section>
+</main>
+<div id="lightbox" class="lightbox" onclick="fermerLightbox()">
+    <span class="fermer" onclick="fermerLightbox()">&times;</span>
+    <img src="" id="imageLightbox" class="image-lightbox">
+    <!-- Boutons de navigation -->
+    <span class="navigation navigation-left" onclick="prevImage(event)">&#10094;</span>
+    <span class="navigation navigation-right" onclick="nextImage(event)">&#10095;</span>
+</div>
+<script>
+    function ouvrirLightbox(src) {
+        document.getElementById('imageLightbox').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function fermerLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+
+    // Liste des images
+    var images = [
+        "image/INTENT1.png",
+        "image/INTENT2.png",
+        "image/INTENT3.png"
+    ];
+
+    // Index de l'image en cours
+    var currentImageIndex = 0;
+
+    // Fonction pour afficher l'image précédente
+    function prevImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+
+    // Fonction pour afficher l'image suivante
+    function nextImage(event) {
+        event.stopPropagation(); // Empêche la fermeture de la lightbox
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.getElementById('imageLightbox').src = images[currentImageIndex];
+    }
+</script>
+</body>
+</html>
