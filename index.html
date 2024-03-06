@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -27,468 +27,507 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Accueil</a>
-                <a href="#about" class="nav-item nav-link">À propos</a>
-                <a href="#qualification" class="nav-item nav-link">Experiences</a>
-                <a href="#skill" class="nav-item nav-link">Compétences</a>
-                <a href="#service" class="nav-item nav-link">Services</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="DOC/tableauSynthese.pdf" class="btn btn-outline-primary d-none d-lg-block">Tableau de synthèse</a>
+<!-- Navbar Start -->
+<nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+    <a href="index.html" class="navbar-brand ml-lg-3">
+
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+        <div class="navbar-nav m-auto py-0">
+            <a href="#home" class="nav-item nav-link active">Accueil</a>
+            <a href="#about" class="nav-item nav-link">À propos</a>
+            <a href="#qualification" class="nav-item nav-link">Experiences</a>
+            <a href="#skill" class="nav-item nav-link">Compétences</a>
+            <a href="#service" class="nav-item nav-link">Services</a>
+            <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+            <a href="#contact" class="nav-item nav-link">Contact</a>
         </div>
-    </nav>
-    <!-- Navbar End -->
+        <a href="DOC/tableauSynthese.pdf" class="btn btn-outline-primary d-none d-lg-block">Tableau de synthèse</a>
+    </div>
+</nav>
+<!-- Navbar End -->
 
 
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+<!-- Video Modal Start -->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Modal End -->
+
+
+<!-- Header Start -->
+<div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                <!-- <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt=""> -->
+            </div>
+            <div class="col-lg-7 text-center text-lg-left">
+                <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Raphaël
+                    Arzoin</h1>
+                <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                <div class="typed-text d-none">Développeur Web, Développeur d'application</div>
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                    <!-- <a href="" class="btn btn-outline-light mr-5">Télécharger le CV</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- About Start -->
+<div class="container-fluid py-5" id="about">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">À propos</h1>
+            <h1 class="position-absolute text-uppercase text-primary">À propos de moi</h1>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5 pb-4 pb-lg-0">
+                <!-- <img class="img-fluid rounded w-100" src="img/about.jpg" alt=""> -->
+            </div>
+            <div class="col-lg-7">
+                <h3 class="mb-4">Developpeur Web et logiciel</h3>
+                <p>Actuellement en deuxième année de BTS Services Informatiques aux Organisations (SIO), j'ai développé
+                    des compétences solides en Java, ainsi qu'en développement web avec PHP, HTML et CSS, au cours de
+                    mes stages précédents. Je suis motivé à mettre en œuvre ces compétences dans des projets
+                    concrets. </p>
+                <div class="row mb-3">
+                    <div class="col-sm-6 py-2"><h6>Nom, prénom : <span class="text-secondary">ARZOIN Raphaël</span></h6>
+                    </div>
+                    <div class="col-sm-6 py-2"><h6>Age : <span class="text-secondary">20 ans</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Année d'étude : <span
+                            class="text-secondary">2ème année de BTS SIO</span></h6></div>
+                    <!-- <div class="col-sm-6 py-2"><h6>Expérience : <span class="text-secondary">--</span></h6></div> -->
+                    <div class="col-sm-6 py-2"><h6>Téléphone : <span class="text-secondary">07 83 03 53 21</span></h6>
+                    </div>
+                    <div class="col-sm-6 py-2"><h6>Email : <span
+                            class="text-secondary">raphaelarzoin173@gmail.com</span></h6></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Qualification Start -->
+<div class="container-fluid py-5" id="qualification">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Experiences</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Études & Experiences</h1>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h3 class="mb-4">Études</h3>
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <h5 class="font-weight-bold mb-1">Brevet des collèges</h5>
+                        <p class="mb-2"><strong>Ozar Hatorah</strong> | <small>2018 - 2019</small></p>
+                        <p>Brevet mention très bien</p>
+                    </div>
+
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <h5 class="font-weight-bold mb-1">BAC Spé mathématiques/physique</h5>
+                        <p class="mb-2"><strong>Ozar Hatorah</strong> | <small>2021 - 2022</small></p>
+                        <p>Bac mention très bien</p>
+                    </div>
+
+
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <h5 class="font-weight-bold mb-1">BTS SIO</h5>
+                        <p class="mb-2"><strong>ORT Montreuil</strong> | <small>2022 - 2024</small></p>
+                        <p>en cours d'obtention du diplôme </p>
+                    </div>
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <h5 class="font-weight-bold mb-1">...</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-4">Mes Expericences</h3>
+                <div class="border-left border-primary pt-2 pl-4 ml-2">
+
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <h5 class="font-weight-bold mb-1">Comptabilité</h5>
+                        <p class="mb-2"><strong>Stage SCB brevet des collèges</strong> | <small>Janvier 2019</small></p>
+                        <p>Stage d'une semaines dans l'entreprise SCB.</p>
+                    </div>
+
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <h5 class="font-weight-bold mb-1">Développement</h5>
+                        <p class="mb-2"><strong>Stage <a href="aquadim.html"> Aquadim </a>BTS 1</strong> | <small>Mai-Juin 2023</small></p>
+                        <p>Stage de 6 semaines dans l'entreprise <a href="aquadim.html"> Aquadim </a> en tant que développeur.</p>
+                    </div>
+                    <div class="position-relative mb-4">
+                        <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                        <h5 class="font-weight-bold mb-1">Développement</h5>
+                        <p class="mb-2"><strong>Stage<a href="aquadim.html"> Aquadim </a> BTS 2</strong> | <small>Janvier-Février 2024</small></p>
+                        <p>Stage de 5 semaines dans l'entreprise <a href="aquadim.html"> Aquadim </a> en tant que développeur.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Video Modal End -->
+</div>
+<!-- Qualification End -->
 
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                   <!-- <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt=""> -->
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Raphaël Arzoin</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Développeur Web, Développeur d'application</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                       <!-- <a href="" class="btn btn-outline-light mr-5">Télécharger le CV</a> -->
-                    </div>
-                </div>
-            </div>
+<!-- Skill Start -->
+<div class="container-fluid py-5" id="skill">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Compétences</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Mes Compétences</h1>
         </div>
-    </div>
-    <!-- Header End -->
+        <div class="row align-items-center">
+            <div class="col-md-6">
 
 
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">À propos</h1>
-                <h1 class="position-absolute text-uppercase text-primary">À propos de moi</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                   <!-- <img class="img-fluid rounded w-100" src="img/about.jpg" alt=""> -->
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">Developpeur Web et logiciel</h3>
-                    <p>Actuellement en deuxième année de BTS Services Informatiques aux Organisations (SIO), j'ai développé des compétences solides en Java, ainsi qu'en développement web avec PHP, HTML et CSS, au cours de mes stages précédents. Je suis motivé à mettre en œuvre ces compétences dans des projets concrets. </p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Nom, prénom : <span class="text-secondary">ARZOIN Raphaël</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Age : <span class="text-secondary">20 ans</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Année d'étude : <span class="text-secondary">2ème année de BTS SIO</span></h6></div>
-                       <!-- <div class="col-sm-6 py-2"><h6>Expérience : <span class="text-secondary">--</span></h6></div> -->
-                        <div class="col-sm-6 py-2"><h6>Téléphone : <span class="text-secondary">07 83 03 53 21</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email : <span class="text-secondary">raphaelarzoin173@gmail.com</span></h6></div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Experiences</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Études & Experiences</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h3 class="mb-4">Études</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">BTS SIO</h5>
-                            <p class="mb-2"><strong>ORT Montreuil</strong> | <small>2022 - 2024</small></p>
-                            <p>en cours d'obtention du diplôme </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">...</h5>
-                            </div>
+                <ul><li>
+                <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-bold">HTML</h6>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-4">Mes Expericences</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Développeur</h5>
-                            <p class="mb-2"><strong>Stage Aquadim BTS 1</strong> | <small>Mai-Juin 2023</small></p>
-<p>Stage de 6 semaines dans l'entreprise Aquadim en tant que développeur.</p>
 
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Développeur</h5>
-                            <p class="mb-2"><strong>Stage Aquadim BTS 2</strong> | <small>Janvier-Février 2024</small></p>
-                            <p>Stage de 5 semaines dans l'entreprise Aquadim en tant que développeur.</p>
-                        </div>
+                </div></li>
+                    <li> <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-bold">CSS</h6>
                     </div>
-                </div>
+                </div></li>
+
+
+                </ul>
             </div>
-        </div>
-    </div>
-    <!-- Qualification End -->
+            <div class="col-md-6">
+                <ul>
 
-
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Compétences</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Mes Compétences</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">HTML</h6>
-                            <h6 class="font-weight-bold">Bonne maitrise</h6>
-                        </div>
-                        <div class="progress">
-
-                        </div>
+                <li> <div class="skill mb-4">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-bold">Java</h6>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">CSS</h6>
-                            <h6 class="font-weight-bold">Assez bonne maitrise</h6>
-                        </div>
-                        <div class="progress">
-                            </div>
-                    </div>
-                    <div class="skill mb-4">
+
+                </div>
+                </li>
+
+                    <li>  <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-bold">PHP</h6>
-                            <h6 class="font-weight-bold">Bonne maitrise</h6>
                         </div>
-                        <div class="progress">
-                            </div>
+
+                    </div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Skill End -->
+
+
+<!-- Services Start -->
+<div class="container-fluid pt-5" id="service">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Services</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Mes Services</h1>
+        </div>
+        <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center mb-4">
+                    <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                    <h4 class="font-weight-bold m-0">Développement Web</h4>
+                </div>
+                <p></p>
+                <!--        <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
+            </div>
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+                <div class="d-flex align-items-center justify-content-center mb-4">
+                    <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                    <h4 class="font-weight-bold m-0">Développement de logiciel</h4>
+                </div>
+                <p></p>
+                <!--                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+
+<!-- Portfolio Start -->
+<div class="container-fluid pt-5 pb-3" id="portfolio">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Portfolio</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Mon Portfolio</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mb-2">
+                <ul class="list-inline mb-4" id="portfolio-flters">
+                    <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">Tout voir</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Développement</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Autre</li>
+                    <!--  <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="row portfolio-container">
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projet1.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20ANNUAIRE.png"
+                                                 alt=""></a>
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projetJdv.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20JDV.png" alt=""></a>
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Java</h6>
-                            <h6 class="font-weight-bold">Bonne maitrise</h6>
-                        </div>
-                        <div class="progress">
-                             </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projetMailer.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20MAILER.png"
+                                                      alt=""></a>
+
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
                     </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projetReporting.html"> <img class="img-fluid rounded w-100"
+                                                         src="image/PROJET%20REPORTING.png" alt=""></a>
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projetPDF.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20PDF.png" alt=""></a>
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projetSF.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20Service%20F.png"
+                                                  alt=""></a>
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projetIntent.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20INTENT.png"
+                                                      alt=""></a>
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                <div class="position-relative overflow-hidden mb-2">
+                    <a href="projetHelport.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20HELPORT.png"
+                                                       alt=""></a>
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                <div class="position-relative overflow-hidden mb-2">
+                    <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Skill End -->
+</div>
+<!-- Portfolio End -->
 
 
-    <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Services</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Mes Services</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Développement Web</h4>
-                    </div>
-                    <p></p>
-            <!--        <a class="border-bottom border-primary text-decoration-none" href="">Read More</a> -->
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Développement de logiciel</h4>
-                    </div>
-                    <p></p>
-<!--                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>-->
-                </div>
-            </div>
+<!-- Testimonial Start
+<div class="container-fluid py-5" id="testimonial">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
         </div>
-    </div>
-    <!-- Services End -->
-
-
-    <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Portfolio</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Mon Portfolio</h1>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">Tout voir</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Développement</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Autre</li>
-                      <!--  <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li> -->
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projet1.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20ANNUAIRE.png" alt=""></a>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                        <h5 class="font-weight-bold m-0">Client Name</h5>
+                        <span>Profession</span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projetJdv.html">  <img class="img-fluid rounded w-100" src="image/PROJET%20JDV.png" alt=""></a>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                        <h5 class="font-weight-bold m-0">Client Name</h5>
+                        <span>Profession</span>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projetMailer.html">  <img class="img-fluid rounded w-100" src="image/PROJET%20MAILER.png" alt=""></a>
-
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projetReporting.html">  <img class="img-fluid rounded w-100" src="image/PROJET%20REPORTING.png" alt=""></a>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projetPDF.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20PDF.png" alt=""></a>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projetSF.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20Service%20F.png" alt=""></a>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projetIntent.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20INTENT.png" alt=""></a>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <a href="projetHelport.html"> <img class="img-fluid rounded w-100" src="image/PROJET%20HELPORT.png" alt=""></a>
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-
-                        </div>
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                        <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                        <h5 class="font-weight-bold m-0">Client Name</h5>
+                        <span>Profession</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Portfolio End -->
+</div>
+-->
+<!-- Testimonial End -->
 
 
-    <!-- Testimonial Start
-    <div class="container-fluid py-5" id="testimonial">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Contact Start -->
+<div class="container-fluid py-5" id="contact">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Me contacter</h1>
         </div>
-    </div>
-    -->
-    <!-- Testimonial End -->
-
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Me contacter</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form text-center">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Votre nom"
-                                        required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Votre email"
-                                        required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Sujet"
-                                    required="required" data-validation-required-message="Please enter a subject" />
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form text-center">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="control-group col-sm-6">
+                                <input type="text" class="form-control p-4" id="name" placeholder="Votre nom"
+                                       required="required" data-validation-required-message="Please enter your name"/>
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="control-group">
+                            <div class="control-group col-sm-6">
+                                <input type="email" class="form-control p-4" id="email" placeholder="Votre email"
+                                       required="required" data-validation-required-message="Please enter your email"/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control p-4" id="subject" placeholder="Sujet"
+                                   required="required" data-validation-required-message="Please enter a subject"/>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
                                 <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Envoyer</button>
-                            </div>
-                        </form>
-                    </div>
+                                          required="required"
+                                          data-validation-required-message="Please enter your message"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Envoyer
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Contact End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-              <!--  <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a> -->
-               <!-- <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>-->
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/rapha%C3%ABl-arzoin-7a4a39268/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.instagram.com/rphl_arzoin/"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-light btn-social" href="https://github.com/raphaelarz"><i class="fab fa-github"></i></a>
+<!-- Footer Start -->
+<div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="container text-center py-5">
+        <div class="d-flex justify-content-center mb-4">
+            <!--  <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a> -->
+            <!-- <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>-->
+            <a class="btn btn-light btn-social mr-2"
+               href="https://www.linkedin.com/in/rapha%C3%ABl-arzoin-7a4a39268/"><i class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-light btn-social mr-2" href="https://www.instagram.com/rphl_arzoin/"><i
+                    class="fab fa-instagram"></i></a>
+            <a class="btn btn-light btn-social" href="https://github.com/raphaelarz"><i class="fab fa-github"></i></a>
 
-            </div>
-            <!--   <div class="d-flex justify-content-center mb-3">
-                   <a class="text-white" href="#">Privacy</a>
-                   <span class="px-3">|</span>
-                   <a class="text-white" href="#">Terms</a>
-                   <span class="px-3">|</span>
-                   <a class="text-white" href="#">FAQs</a>
-                   <span class="px-3">|</span>
-                   <a class="text-white" href="#">Help</a>
-               </div> -->
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Raphaël Arzoin</a>
-            </p>
         </div>
+        <!--   <div class="d-flex justify-content-center mb-3">
+               <a class="text-white" href="#">Privacy</a>
+               <span class="px-3">|</span>
+               <a class="text-white" href="#">Terms</a>
+               <span class="px-3">|</span>
+               <a class="text-white" href="#">FAQs</a>
+               <span class="px-3">|</span>
+               <a class="text-white" href="#">Help</a>
+           </div> -->
+        <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Raphaël Arzoin</a>
+        </p>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+<!-- Scroll to Bottom -->
+<i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/typed/typed.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>
